@@ -1,0 +1,32 @@
+{% extends 'web/main-nofooter.html' %}
+
+{% block content %}
+
+<section class="s2"">
+    <div class="main-container" style="margin-bottom: 60px;">
+        <a href=""></a>
+        <h1 style="text-align: center;">Meet Nathan</h1>
+        <h6 style="text-align: center; margin-bottom: 30px;">meet.nathann.site</h6>
+
+        <form id="contact-form" method="POST" action="{% url 'send-meet' %}">
+            {% csrf_token %}
+            <a name="contact"></a>
+
+            <label style="margin-left: -20px;">Your Name</label>
+            <input required class="input-field" type="text" name="name">
+
+            <label style="margin-left: 5px;">Date and Time to Meet Me</label>
+            <input required class="input-field" type="text" name="subject">
+
+            <label style="margin-left: 5px;">Your Email</label>
+            <input required class="input-field" type="text" name="email">
+
+            <label style="margin-left: 5px;">Your Message</label>
+            <textarea required class="input-field" name="message"></textarea>
+
+            <input id="submit-btn" type="submit" value="Send">
+        </form>
+    </div>
+</section> 
+
+{% endblock content %}

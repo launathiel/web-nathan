@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Nathan's site</title>
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47692315-56"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-47692315-56');
+        </script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+        <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    </head>
+    <body style="background-color: var(--secondaryColor);">
+
+        {% include 'web/navbar.html' %}
+
+        {% block content %}
+        <!--content here-->
+        {% endblock content %}
+
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="menu_links">
+                            <ul id="navigation" style="margin-bottom: -7px; margin-top: -10px; margin-left: 40px;">
+                                <li><a href="{% url 'posts' %}">My Blog</a></li>
+                                <li><a href="{% url 'meet' %}">Meet Me</a></li>
+                                <li><a href="{% url 'home' %}#contact">Contact</a></li>
+                            </ul>
+                            <hr style="color: var(--borderColor); width: 400px;">
+                        <div class="social_links" style="margin-top: 40px; margin-bottom: 35px;">
+                            <ul>
+                                <a target="_blank" href="https://www.linkedin.com/in/laurentius-nathaniel-845b27169/"> 
+                                    <i class="fab fa-linkedin" style="font-size:25px; color:var(--mainText)"></i> 
+                                </a>
+                                <a target="_blank" href="https://www.instagram.com/launathiel/"> 
+                                    <i class="fab fa-instagram" style="font-size:25px; color:var(--mainText)"></i> 
+                                </a>
+                                <a target="_blank" href="https://www.twitter.com/launathiel/"> 
+                                    <i class="fab fa-twitter" style="font-size:25px; color:var(--mainText)"></i> 
+                                </a>
+                                <a target="_blank" href="https://github.com/launathiel/"> 
+                                    <i class="fab fa-github" style="font-size:25px; color:var(--mainText)"></i> 
+                                </a>
+                                <a target="_blank" href="https://gitlab.com/launathiel/"> 
+                                    <i class="fab fa-gitlab" style="font-size:25px; color:var(--mainText)"></i> 
+                                </a>
+                                <a target="_blank" href="https://t.me/launathiel"> 
+                                    <i class="fab fa-telegram" style="font-size:25px; color:var(--mainText)"></i> 
+                                </a>
+                            </ul>
+                        </div>
+                        <div>
+                            <p style="font-size: 12px; color: var(--secondaryText)">
+                            Created using django, template by dennisivy, created and modify by Laurentius Nathaniel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script type="text/javascript">
+            let static = "{% static 'css' %}"
+        </script>
+    
+        <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>

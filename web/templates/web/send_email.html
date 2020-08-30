@@ -1,0 +1,47 @@
+{% extends 'web/main-nofooter.html' %}
+
+{% block content %}
+
+<style type="text/css">
+	html, body{
+		height: 100%;
+	}
+
+	#page-wrapper{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: var(--secondaryColor);
+	}
+
+	#success-box{
+		width: 700px;
+		height: auto;
+		background-color: var(--PrimaryColor);;
+		border:3px solid var(--borderColor);;
+		border-radius: 5px;
+		padding: 15px;
+	}
+
+	#success-box p{
+		font-size: 18px;
+	}
+
+</style>
+
+<div id="page-wrapper">
+	<div id="success-box" class="content-block">
+		<h1>Thank You</h>
+		<h2>for contacting me!</h2>
+		<br>
+		<p>Your message was successfully sent.</p>
+		<p>I will be contacting you soon :)</p>
+		<br>
+		<a id="back-btn" class="btn btn-success" href="{% url 'home' %}">BACK TO HOME PAGE</a>
+		<br><br>
+	</div>
+</div>
+
+{% endblock content %}
