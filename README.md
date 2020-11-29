@@ -1,4 +1,4 @@
-# Portofolio Website using Django
+# Portofolio Website using Django and run with container
 
  Created using django, template by dennisivy, created and modify by Laurentius Nathaniel.
  
@@ -7,20 +7,18 @@
 
 # To Run On local machine
 
-you need python-pip to run django
-
 ```sh
-$ sudo apt install python-pip virtualenv
-$ virtualenv venv -p python3 
-$ cd venv
-$ source bin/activate
+$ sudo apt install docker.io
 ```
 clone this repo
 
 ```sh
-$ git clone https://github.com/launathiel/web-nathan.git
-$ cd web-nathan
-$ pip install -r requirement.txt
-$ pyhon manage.py runserver
+docker image pull webnathan-django:latest
+docker run -d -p 80:8000 webnathan-django:latest
 ```
-The website running on 127.0.0.1:8000 and check it!
+The website running on 127.0.0.1 and check it!
+
+## Admin Page
+127.0.0.1/admin
+username : user
+password : user
