@@ -20,5 +20,7 @@ The website running on 127.0.0.1 and check it!
 
 ## Admin Page
 127.0.0.1/admin
+
 username : user
+
 password : user
